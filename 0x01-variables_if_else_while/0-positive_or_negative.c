@@ -1,14 +1,13 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/* 0. Positive anything is better than negative nothing */
 
 /**
  * main - Entry point
  *
  * Description: Print whether a number is positive or negative
  *
- * Return : Always 0 (success)
+ * Return: Always 0 (success)
  */
 
 int main(void)
@@ -30,5 +29,6 @@ int main(void)
 	{
 		printf("%d is negative\n", n);
 	}
-	return 0;
+
+	return (0);
 }

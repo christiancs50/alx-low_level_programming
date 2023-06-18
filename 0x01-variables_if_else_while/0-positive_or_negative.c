@@ -4,7 +4,9 @@
 /* 0. Positive anything is better than negative nothing */
 
 /**
- * main - Print whether a number is positive or negative
+ * main - Entry point
+ *
+ * Description: Print whether a number is positive or negative
  *
  * Return : Always 0 (success)
  */

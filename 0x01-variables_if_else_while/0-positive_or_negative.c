@@ -1,10 +1,10 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/* Print whether a number is positive or negative */
+/* 0. Positive anything is better than negative nothing */
 
 /**
- * main - Entry point
+ * main - Print whether a number is positive or negative
  *
  * Return : Always 0 (success)
  */

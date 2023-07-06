@@ -1,5 +1,5 @@
 #include "main.h"
-int actual_sqrt_recursion(int n , int sq);
+int actual_sqrt_recursion(int n, int sq);
 
 /**
  * _sqrt_recursion - function that returns the natural square root of a num
@@ -21,11 +21,11 @@ int _sqrt_recursion(int n)
  * Return: Result or -1
  */
 
-int actual_sqrt_recursion(int n , int sq)
+int actual_sqrt_recursion(int n, int sq)
 {
 	if (sq * sq > n)
-	      return (-1);
+		return (-1);
 	if (sq * sq == n)
 		return (sq);
-	return(actual_sqrt_recursion(n, sq + 1));
-}	
+	return (actual_sqrt_recursion(n, sq + 1));
+}

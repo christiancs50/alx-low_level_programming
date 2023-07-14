@@ -1,5 +1,3 @@
-3-alloc_grid.c
-
 #include "main.h"
 #include <stdlib.h>
 /**
@@ -10,36 +8,33 @@
  */
 int **alloc_grid(int width, int height)
 {
-	int **ptgrid;
-	int x, y;
+	int i, x, y;
+	int  **ptgrid;
 
-	if (width <= 0 || height <= 0)
-		return (NULL);
+    if (width <= 0 || height <= 0)
+        return NULL;
 
-	ptgrid = malloc(sizeof(int *) * height);
+    ptgrid = malloc(sizeof(int *) * height);
 
-	if (ptgrid == NULL)
-		return (NULL);
+    if (ptgrid == NULL)
+        return NULL;
 
-	for (x = 0; x < height; x++)
-	{
-		ptgrid[x] = malloc(sizeof(int) * width);
+    for (x = 0; x < height; x++)
+    {
+        ptgrid[x] = malloc(sizeof(int) * width);
 
-		if (ptgrid[x] == NULL)
-		{
-			for (; x >= 0; x--)
-				free(ptgrid[x]);
+        if (ptgrid[x] == NULL)
+        {
+            for (i = 0; i < x; i++)
+                free(ptgrid[i]);
 
-			free(ptgrid);
-			return (NULL);
-		}
-	}
+            free(ptgrid);
+            return NULL;
+        }
 
-	for (x = 0; x < height; x++)
-	{
-		for (y = 0; y < width; y++)
-			ptgrid[x][y] = 0;
-	}
+        for (y = 0; y < width; y++)
+            ptgrid[x][y] = 0;
+    }
 
-	return (ptgrid);
+    return ptgrid;
 }

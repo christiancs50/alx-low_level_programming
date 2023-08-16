@@ -16,7 +16,7 @@ int main(void)
 		{
 			for (num3 = num2; num3 < 10; num3++)
 			{
-				if (num3 == num1)
+				if (num3 == num2)
 				{
 					num4 = num2 + 1;
 				}

@@ -9,22 +9,15 @@
  */
 void print_all(const char * const format, ...)
 {
-	const char *sep = " ";
-	int arg_count = 0;
+	const char *sep = " ";;
 	char *str;
-	int i;
+	int i = 0;
 	va_list list;
 
 	va_start(list, format);
 
-	for (i = 0; format && format[i]; i++)
+	while ( format && format[i])
 	{
-		if (arg_count > 0)
-		{
-			printf("%s", sep);
-			sep = ", ";
-		}
-
 		switch (format[i])
 		{
 			case 'c':
@@ -41,9 +34,11 @@ void print_all(const char * const format, ...)
 				printf("%s", (str != NULL) ? str : "(nil)");
 				break;
 			default:
+				i++;
 			continue;
 		}
-		arg_count++;
+		sep = ", ";
+		i++;
 	}
 	printf("\n");
 	va_end(list);

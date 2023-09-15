@@ -9,7 +9,7 @@
  */
 void print_all(const char * const format, ...)
 {
-	const char *sep = " ";
+	const char *sep = "";
 	char *str;
 	int i = 0;
 	va_list list;

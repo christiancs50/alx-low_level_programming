@@ -1,19 +1,11 @@
-#include "main.h"
+#include "lists.h"
 
 /**
- * struct list_s - singly linked list
- * @str: string - (malloc'ed string)
- * @len: length of the string
- * @next: points to the next node
- *
- * Description: singly linked list node structure
+ * add_node_end- function that adds a new node
+ * @head: string - (malloc'ed string)
+ * @str : length of the string
+ * Return: NULL or elements
  */
-typedef struct list_s
-{
-	char *str;
-	unsigned int len;
-	struct list_s *next;
-} list_t;
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *new;

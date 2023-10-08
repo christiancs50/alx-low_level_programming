@@ -1,11 +1,11 @@
-#include "main.h"
+include "main.h"
 
 /**
  * print_binary - prints the binary representation of a number
  * @n:the number to be printed.
  */
 
-void print_binary(unsikgned long int n)
+void print_binary(unsigned long int n)
 {
 	int print, bit_pos;
 	unsigned long int mask;
